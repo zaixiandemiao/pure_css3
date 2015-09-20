@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3实现平滑过渡导航</title>
+<!--设置IE浏览器使用最新的渲染引擎    -->
+    <meta http-equiv="X-UA-Compatible" content="IE-edge,chrome=1">  
+<!--    设置页面大小适应设备屏幕的大小-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+    <div id="container">
+        <div class="subContainer">
+             <!-- nav begin-->
+             <input type="radio" name="nav-set" checked="checked" id="nav-1">
+             <a href="#panel-1">Serendipity</a>
+             <input type="radio" name="nav-set" id="nav-2">
+             <a href="#panel-2">Transfer</a>
+             <input type="radio" name="nav-set" id="nav-3">
+             <a href="#panel-3">Passport</a>
+             <input type="radio" name="nav-set" id="nav-4">
+             <a href="#panel-4">Democory</a>
+             <input type="radio" name="nav-set" id="nav-5">
+             <a href="#panel-5">Hiberate</a>
+             <!--nav end content begin -->
+             <div class="st-scroll">
+                 <section class="st-panel" id="panel-1">
+                     <div class="st-desc" data-icon="H"></div>
+                     <h2>Serendipity</h2>
+                     <p>this is Serendipity page</p>
+                 </section>
+                 <section class="st-panel st-color" id="panel-2">
+                     <div class="st-desc" data-icon="2"></div>
+                     <h2>Transfer</h2>
+                     <p>this is Transfer page</p>
+                 </section>
+                 <section class="st-panel" id="panel-3">
+                     <div class="st-desc" data-icon="B"></div>
+                     <h2>Passport</h2>
+                     <p>this is Passport page</p>
+                 </section>
+                 <section class="st-panel st-color" id="panel-4">
+                     <div class="st-desc" data-icon="x"></div>
+                     <h2>Democory</h2>
+                     <p>this is Democory page</p>
+                 </section>
+                 <section class="st-panel" id="panel-5">
+                     <div class="st-desc" data-icon="C"></div>
+                     <h2>Hiberate</h2>
+                     <p>this is Hiberate page</p>
+                 </section>
+             </div>
+        </div>
+    </div>
+</body>
+</html>

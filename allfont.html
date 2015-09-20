@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>所有图标</title>
+    <style type="text/css">
+        @font-face {
+            font-family: "Raphaelicons";
+            src: url('fonts/raphaelicons-webfont.eot') format('eot'),
+                 url('fonts/raphaelicons-webfont.ttf') format('truetype'),
+                 url('fonts/raphaelicons-webfont.woff') format('woff'),
+                 url('fonts/raphaelicons-webfont.svg') format('svg');
+            font-weight: normal;
+            font-style: normal;
+        }
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-size: 15px;
+            font-family: Arial,serif;
+        }
+        #wrap {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        #wrap .ft-panel {
+            height: 70px;
+            width: 10%;
+            background-color: #eee;
+            border: 1px solid #000;
+            box-sizing: border-box;
+        }
+        .ft-panel {
+            float: left;
+        }
+        .ft-panel > .st-desc {
+            font-family: "Raphaelicons";
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            font-size: 50px;
+            text-align: center;
+        }
+        .ft-panel > p {
+            margin: 0;
+            padding: 0;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            background-color: #666;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap" class="container">
+        <div class="ft-panel">
+            <div class="st-desc">{{icon1}}</div>
+            <p>{{icon2}}</p>
+        </div>
+    </div>
+<script type="text/javascript">
+    var words = ['&#xa9;','&#xae;','!','&#x22;','#','$','%','&#x26;',"'",'(',')','*','+',',','-',
+                '.','/','0','1','2','3','4','5','6','7','8','9',':',';','&#x3c;','&#x3e;','?','@','A','B',
+                'C','D','E','F','G','H','I','G','K','L','M','N','O','P','Q','R','S','T','U','V','W','a',
+                'b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w',
+                'x','y','z','&#xc0;','&#xc1;','&#xc2;','&#xc3;','&#xc4;','&#xc5;','&#xc6;','&#xc7;','&#xc8;',
+                '&#xc9;','&#xca;','&#xcb;','&#xcc;','&#xcd;','&#xce;','&#xcf;','&#xd0;','&#xd1;','&#xd2;',
+                '&#xd3;','&#xd4;','&#xd5;','&#xd6;','&#xd7;','&#xd8;','&#xd9;','&#xda;','&#xdb;','&#xdc;',
+                '&#x2010;','&#x2011;','[','\\',']','^','_','`','&#xad;'];
+    var model = document.getElementById('wrap');
+    var template = model.innerHTML;
+    var str = '';
+    words.forEach(function(index) {
+        str += template.replace(/{{icon1}}/,index).replace(/{{icon2}}/,index);
+    });
+    model.innerHTML = str;
+</script>
+</body>
+</html>
